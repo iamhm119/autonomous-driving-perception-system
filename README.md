@@ -20,7 +20,8 @@ Detects vehicles, tracks them across frames, estimates distance, and warns of co
 ## 📋 Table of Contents
 
 1. [Problem Statement](#-problem-statement)
-2. [Features](#-features)
+2. [🎬 Demo & Visualizations](#-demo--visualizations)
+3. [Features](#-features)
 3. [Architecture](#-architecture)
 4. [Tech Stack](#-tech-stack)
 5. [Installation](#-installation)
@@ -45,6 +46,29 @@ This project implements a **multi-task perception pipeline** that addresses thes
 - **Distance Estimation** — Estimate how far each vehicle is (monocular)
 - **Collision Warning** — Predict dangerous proximity using Time-to-Collision
 - **Lane Detection** — Identify road boundaries for lane-keeping awareness
+
+---
+
+## 🎬 Demo & Visualizations
+
+### 1. Real-Time Unified Inference Output
+Here is the output from our integrated perception pipeline. It demonstrates active lane-keeping overlays (green polygon), multi-vehicle tracking boundaries color-coded by safety risk (Green = Safe, Orange = Warning, Red = Collision Alert), and real-time monocular distance estimations:
+
+<p align="center">
+  <img src="assets/demo_detection_1.jpg" width="48%" alt="Inference Sample 1" />
+  <img src="assets/demo_detection_2.jpg" width="48%" alt="Inference Sample 2" />
+</p>
+<p align="center">
+  <img src="assets/demo_detection_3.jpg" width="48%" alt="Inference Sample 3" />
+  <img src="assets/demo_detection_4.jpg" width="48%" alt="Inference Sample 4" />
+</p>
+
+### 2. Video Pipeline Demo
+To run the full video analysis stream with live HUD overlay:
+```bash
+python detect_video_v2.py --video nb_images/road_video_compressed2.mp4 --driving_mode --lane_detection --show
+```
+*Outputs will be visualized dynamically in a GUI window or saved to `out/result_road.mp4`.*
 
 ---
 
