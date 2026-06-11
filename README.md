@@ -327,7 +327,7 @@ autonomous-driving-perception-system/
 
 ---
 
-## 🏆 Resume Highlights
+## 🏆 Key Highlights
 
 > This project demonstrates:
 >
